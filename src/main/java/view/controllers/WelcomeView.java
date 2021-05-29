@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import controller.WelcomePageController;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -54,6 +55,13 @@ public class WelcomeView extends Application {
         launch(args);
     }
 
+    @FXML
+    public void initialize() {
+        if (!WelcomePageController.isIsMusicPlaying()) {
+            sound.setImage(new Image("/pictures/musicIcon/mute.jpg"));
+        }
+    }
+
     @Override
     public void start(Stage primaryStage) {
         readData();
@@ -66,7 +74,7 @@ public class WelcomeView extends Application {
             Media musicFile = new Media(Paths.get("src/main/resources/music/test.mp3").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(musicFile);
             WelcomePageController.setMedia(mediaPlayer);
-            //controller.play();
+            controller.play();
         } catch (Exception e) {
             e.printStackTrace();
         }

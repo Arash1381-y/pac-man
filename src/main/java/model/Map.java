@@ -32,7 +32,13 @@ public class Map {
         this.mapShape = mapShape;
         addRandomBomb();
         allMaps.add(this);
-        System.out.println(mapShape.length());
+    }
+
+    public Map(String randomMap){
+        this.xSize = 27;
+        this.ySize = 27;
+        this.mapShape = randomMap;
+        addRandomBomb();
     }
 
     public static ArrayList<Map> getAllMaps() {
@@ -71,7 +77,7 @@ public class Map {
                 pane.setPrefWidth(16.18518518518519);
                 pane.setPrefHeight(16.38518518518519);
                 if (mapShape.charAt(column * ySize + row) == ' ')
-                    pane.setStyle("-fx-background-color: #0a0a0a; -fx-border-color: #000cfc");
+                    pane.setStyle("-fx-background-color: #0024ff; -fx-border-color: #1a1818");
                 else {
                     counter++;
                     pane.setStyle("-fx-background-color: #faf7f7; -fx-border-color: #040443");
