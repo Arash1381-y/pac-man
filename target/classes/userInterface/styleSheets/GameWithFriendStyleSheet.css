@@ -1,0 +1,9 @@
+.root {
+    -fx-background-image: url("/pictures/neonGameBackGround.jpg");
+    -fx-background-size: auto;
+}
+
+.house{
+    -fx-border-style: solid;
+    -fx-border-color: #fa89f9;
+}

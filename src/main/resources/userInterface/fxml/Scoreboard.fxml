@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="673.0"
+            stylesheets="/userInterface/styleSheets/ScoreBoardStyleSheet.css" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ScoreBoardController">
+    <Label fx:id="title" alignment="CENTER" layoutX="261.0" layoutY="34.0" prefHeight="50.0" prefWidth="150.0"
+           text="SCORE BOARD"/>
+    <Button fx:id="generateChart" layoutX="472.0" layoutY="124.0" mnemonicParsing="false" onAction="#generateTableView"
+            text="Generate ScoreBoard"/>
+    <TableView fx:id="scoreBoard" layoutX="35.0" layoutY="124.0" prefHeight="100.0" prefWidth="379.0">
+      <columns>
+          <TableColumn fx:id="playerName" prefWidth="75.0" text="name"/>
+          <TableColumn fx:id="wins" prefWidth="75.0" text="wins"/>
+          <TableColumn fx:id="draws" prefWidth="75.0" text="draws"/>
+          <TableColumn fx:id="looses" prefWidth="75.0" text="looses"/>
+          <TableColumn fx:id="scores" prefWidth="75.0" text="score"/>
+      </columns>
+    </TableView>
+    <Button layoutX="472.0" layoutY="200.0" mnemonicParsing="false" onAction="#switchToWelcomeScene"
+            text="Back"/>
+</AnchorPane>

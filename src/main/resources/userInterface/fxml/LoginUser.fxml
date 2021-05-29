@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" style="-fx-border-color: #fe9b38; -fx-border-width: 7;" stylesheets="/userInterface/styleSheets/LoginStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.LoginUserView">
+   <Button layoutX="628.0" layoutY="453.0" mnemonicParsing="false" onAction="#switchToWelcomeScene" stylesheets="@../styleSheets/LoginStyleSheet.css" text="Back" />
+   <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: white; -fx-border-color: #fe9b38; -fx-border-width: 5;" text="LOGIN MENU" textFill="#fe9b38" />
+   <VBox fx:id="chart" alignment="TOP_CENTER" layoutX="578.0" layoutY="113.0" prefHeight="200.0" prefWidth="199.0" styleClass="chart" stylesheets="@../styleSheets/LoginStyleSheet.css">
+      <Label />
+      <TextField onMouseClicked="#clearUsername" fx:id="username" alignment="CENTER" prefHeight="22.0" prefWidth="199.0" text="username" />
+      <Label />
+      <PasswordField  onMouseClicked="#clearPass" fx:id="userPass" alignment="CENTER" text="password" />
+      <Label />
+      <Button mnemonicParsing="false" onAction="#logInUser" prefHeight="26.0" prefWidth="100.0" text="Login" textAlignment="CENTER" />
+   </VBox>
+   <Label fx:id="error" alignment="CENTER" layoutX="172.0" layoutY="287.0" prefHeight="26.0" prefWidth="173.0" />
+   <ImageView fx:id="ghost" fitHeight="121.0" fitWidth="124.0" layoutX="30.0" layoutY="92.0" onMouseClicked="#scaredGhost" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../pictures/ghostPic/orangeGhost.png" />
+   </ImageView>
+   <Circle fill="#fe9b38" layoutX="743.0" layoutY="364.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="798.0" layoutY="351.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="826.0" layoutY="300.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="799.0" layoutY="252.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="826.0" layoutY="187.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="798.0" layoutY="133.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="826.0" layoutY="78.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="545.0" layoutY="173.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="756.0" layoutY="78.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="592.0" layoutY="65.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="651.0" layoutY="85.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="545.0" layoutY="239.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="691.0" layoutY="338.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="551.0" layoutY="120.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="705.0" layoutY="57.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="538.0" layoutY="287.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="558.0" layoutY="338.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="638.0" layoutY="364.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="552.0" layoutY="393.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="719.0" layoutY="519.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="704.0" layoutY="406.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="786.0" layoutY="406.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="565.0" layoutY="453.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="769.0" layoutY="466.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="826.0" layoutY="453.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="538.0" layoutY="479.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="565.0" layoutY="453.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="704.0" layoutY="406.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="826.0" layoutY="453.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="619.0" layoutY="519.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="602.0" layoutY="416.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="809.0" layoutY="516.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="#fe9b38" layoutX="559.0" layoutY="519.0" radius="14.0" stroke="WHITE" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="651.0" layoutY="27.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Circle fill="WHITE" layoutX="769.0" layoutY="27.0" radius="13.0" stroke="#ff9000" strokeType="INSIDE" />
+   <Line endX="-84.79998779296875" endY="443.5999755859375" layoutX="599.0" layoutY="107.0" startX="-84.79998779296875" startY="-95.39999389648438" stroke="#fe9b38" />
+
+</AnchorPane>

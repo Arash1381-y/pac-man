@@ -1,0 +1,67 @@
+.root {
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-max-width: 600;
+    -fx-max-height: 470;
+    -fx-min-height: 470;
+    -fx-min-width: 470;
+    -fx-background-image: url(../../pictures/ticTacToeScoreBoard.jpg);
+    -fx-background-size: cover;
+}
+
+#title {
+    -fx-font-size: 20;
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-border-style: solid;
+    -fx-border-color: white;
+}
+
+#generateChart {
+    -fx-background-color: #000000;
+    -fx-pref-width: 100px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+#generateChart:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+}
+#generateChart:pressed {
+    -fx-translate-y: +2;
+}
+
+#scoreBoard{
+    -fx-border-color: black;
+}
+
+#generateChart:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+}
+#generateChart:pressed {
+    -fx-translate-y: +2;
+}
+
+#back{
+    -fx-background-color: #000000;
+    -fx-pref-width: 100px;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+#back:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+}
+#back:pressed {
+    -fx-translate-y: +2;
+}
+
+#scoreBoard{
+    -fx-border-color: black;
+}
+
