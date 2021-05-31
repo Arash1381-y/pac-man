@@ -1,6 +1,8 @@
 package controller;
 
 import javafx.scene.media.MediaPlayer;
+import model.Map;
+import model.MapAdaptor;
 
 public class WelcomePageController extends Controller {
     private static MediaPlayer mediaPlayer;
@@ -14,6 +16,10 @@ public class WelcomePageController extends Controller {
         WelcomePageController.mediaPlayer = mediaPlayer;
     }
 
+    public static boolean isIsMusicPlaying() {
+        return isMusicPlaying;
+    }
+
     public void play() {
         mediaPlayer.play();
         isMusicPlaying = true;
@@ -24,7 +30,9 @@ public class WelcomePageController extends Controller {
         isMusicPlaying = false;
     }
 
-    public static boolean isIsMusicPlaying() {
-        return isMusicPlaying;
+    public void createMaps() {
+        for (Map map : Map.getAllMaps()) {
+            MapAdaptor.setMapPane(map);
+        }
     }
 }

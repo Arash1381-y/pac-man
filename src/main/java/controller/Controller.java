@@ -4,10 +4,12 @@ import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import view.controllers.*;
@@ -31,11 +33,12 @@ public abstract class Controller {
         stage = (Stage) node.getScene().getWindow();
         scene = new Scene(parent, 863.0, 555.0);
         stage.setScene(scene);
-        loadPane(loader, type);
+        scene.getRoot().requestFocus();
+        loadPane(loader, type, scene);
         timeline.play();
     }
 
-    private void loadPane(FXMLLoader loader, String page) {
+    private void loadPane(FXMLLoader loader, String page, Scene scene) {
 
         switch (page) {
             case "welcome": {
@@ -64,8 +67,20 @@ public abstract class Controller {
                 break;
             }
             case "setting": {
-                SettingView  controller = loader.getController();
+                SettingView controller = loader.getController();
                 controller.anchorPane.resize(863.0, 555.0);
+                break;
+            }
+            case "playGame": {
+                GamePlayView controller = loader.getController();
+                controller.anchorPane.resize(863.0, 555.0);
+                scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+                    @Override
+                    public void handle(KeyEvent event) {
+                        controller.pressKey(event.getCode());
+                    }
+                });
+                break;
             }
         }
     }

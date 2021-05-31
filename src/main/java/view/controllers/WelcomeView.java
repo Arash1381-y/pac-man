@@ -65,6 +65,7 @@ public class WelcomeView extends Application {
     @Override
     public void start(Stage primaryStage) {
         readData();
+        controller.createMaps();
         try {
             parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/userInterface/fxml/Welcome.fxml")));
             primaryStage.setTitle("Pac-Man");
@@ -74,7 +75,7 @@ public class WelcomeView extends Application {
             Media musicFile = new Media(Paths.get("src/main/resources/music/test.mp3").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(musicFile);
             WelcomePageController.setMedia(mediaPlayer);
-            controller.play();
+            //controller.play();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -111,8 +112,8 @@ public class WelcomeView extends Application {
     }
 
     public void switchToGame() throws IOException {
-        String address = "/userInterface/fxml/Setting.fxml";
-        controller.moveToPage(address, setting, "setting");
+        String address = "/userInterface/fxml/GamePlay.fxml";
+        controller.moveToPage(address, setting, "playGame");
     }
 
     public void exit() throws IOException {

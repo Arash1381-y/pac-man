@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" style="-fx-background-color: darkblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.SettingView">
+<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" styleClass="label" stylesheets="@../styleSheets/SettingStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.SettingView">
     <Label contentDisplay="CENTER" layoutX="33.0" layoutY="23.0" text="Setting" textFill="WHITE">
         <font>
             <Font name="System Bold" size="20.0" />
@@ -28,25 +28,25 @@
     </ImageView>
     <ImageView fx:id="fifthLife" fitHeight="28.0" fitWidth="28.0" layoutX="189.0" layoutY="95.0" onMouseClicked="#clickOnPacMan" pickOnBounds="true" preserveRatio="true">
     </ImageView>
-    <Label layoutX="579.0" layoutY="52.0" text="Game Map" textFill="#f2f0f0">
+    <Label layoutX="509.0" layoutY="52.0" text="Game Map" textFill="#f2f0f0">
         <font>
             <Font name="System Bold" size="23.0" />
         </font>
     </Label>
-    <AnchorPane layoutX="24.0" layoutY="178.0" prefHeight="169.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: white; -fx-border-width: 3; -fx-background-radius: 40;">
-        <Label layoutX="66.0" layoutY="1.0" text="map data" textFill="#2200ff">
+    <AnchorPane layoutX="24.0" layoutY="178.0" prefHeight="169.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 3; -fx-background-radius: 40;">
+        <Label layoutX="66.0" layoutY="1.0" text="map data" textFill="#f46a15">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
         <Label layoutX="14.0" layoutY="45.0" text="size : " textFill="#0a10f2" />
         <Label fx:id="mapSize" layoutX="45.0" layoutY="45.0" />
-        <Label layoutX="14.0" layoutY="83.0" text="points num :" textFill="#180ffa" />
+        <Label layoutX="14.0" layoutY="83.0" text="points num :" textFill="#792600" />
         <Label fx:id="pointsNum" layoutX="80.0" layoutY="83.0" />
     </AnchorPane>
-    <Polygon fx:id="next" fill="DODGERBLUE" layoutX="595.0" layoutY="543.0" onMouseClicked="#goToNext" points="68.4000244140625, -13.0, 50.800048828125, -5.79998779296875, 50.800048828125, -19.4000244140625" stroke="BLACK" strokeType="INSIDE" />
-    <Polygon fx:id="previous" fill="DODGERBLUE" layoutX="579.0" layoutY="542.0" onMouseClicked="#goToPrevious" points="34.79998779296875, -11.79998779296875, 50.800048828125, -5.79998779296875, 50.800048828125, -19.4000244140625" stroke="BLACK" strokeType="INSIDE" />
-    <Button layoutX="29.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" prefHeight="50.0" prefWidth="54.0" style="-fx-background-color: white; -fx-background-radius: 200; -fx-text-fill: blue;" text="Back" />
+    <Polygon fx:id="next" fill="WHITE" layoutX="546.0" layoutY="540.0" onMouseClicked="#goToNext" points="68.4000244140625, -13.0, 50.800048828125, -5.79998779296875, 50.800048828125, -19.4000244140625" stroke="BLACK" strokeType="INSIDE" />
+    <Polygon fx:id="previous" fill="WHITE" layoutX="487.0" layoutY="540.0" onMouseClicked="#goToPrevious" points="34.79998779296875, -11.79998779296875, 50.800048828125, -5.79998779296875, 50.800048828125, -19.4000244140625" stroke="BLACK" strokeType="INSIDE" />
+    <Button layoutX="29.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" prefHeight="50.0" prefWidth="54.0" style="-fx-background-radius: 200;" text="Back" />
     <Label fx:id="error" layoutX="24.0" layoutY="134.0" prefHeight="18.0" prefWidth="200.0" />
-   <Button onMouseClicked="#generateMap" layoutX="527.0" layoutY="518.0" mnemonicParsing="false" text="Random" />
+   <Button layoutX="546.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#generateMap" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 200;" stylesheets="@../styleSheets/SettingStyleSheet.css" text="rand" />
 </AnchorPane>

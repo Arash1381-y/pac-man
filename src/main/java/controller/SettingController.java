@@ -1,13 +1,13 @@
 package controller;
 
-import model.GameProp;
+import model.Game;
 
 public class SettingController extends Controller {
     public void reduceHealth() {
-        GameProp.reduceHealth();
+        Game.reduceHealth();
     }
 
     public void increaseHealth() {
-        GameProp.increaseHealth();
+        Game.increaseHealth();
     }
 }

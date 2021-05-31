@@ -4,22 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="complete setting">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/MapGenerator.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="random map maker">
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/MapAdaptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/MapHouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-closed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-down-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-left-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-right-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-up-open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GamePlayStyleSheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/SettingStyleSheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SettingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/GameProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GameSetUpStyleSheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GameWithFriendStyleSheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/SettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SettingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/WelcomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/WelcomePageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/GameProp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/GameSetUpStyleSheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/GameWithFriendStyleSheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +101,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -174,6 +198,8 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -186,18 +212,18 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\semister 2\java exercise\pac-man\src\main\java\view\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\pacmanPic\pacManGamePic" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\pacmanPic" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\jsonfiles" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\music" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures" />
-      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\pagebackground" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -263,19 +289,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -350,7 +363,16 @@
       <workItem from="1622000407590" duration="9323000" />
       <workItem from="1622082705349" duration="12196000" />
       <workItem from="1622130350367" duration="41462000" />
-      <workItem from="1622256366808" duration="5554000" />
+      <workItem from="1622256366808" duration="7523000" />
+      <workItem from="1622304149133" duration="606000" />
+      <workItem from="1622311465394" duration="357000" />
+      <workItem from="1622340463413" duration="14922000" />
+      <workItem from="1622395578977" duration="350000" />
+      <workItem from="1622403007463" duration="8057000" />
+      <workItem from="1622412465875" duration="12392000" />
+      <workItem from="1622431736201" duration="8001000" />
+      <workItem from="1622475250789" duration="2610000" />
+      <workItem from="1622479278552" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="complete setting">
       <created>1622256724584</created>
@@ -366,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622256812450</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="random map maker">
+      <created>1622262983693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622262983693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -422,7 +451,8 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="tic tac toe game (the AI Part will be added soon)" />
     <MESSAGE value="complete setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete setting" />
+    <MESSAGE value="random map maker" />
+    <option name="LAST_COMMIT_MESSAGE" value="random map maker" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

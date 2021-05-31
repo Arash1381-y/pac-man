@@ -10,7 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Polygon;
-import model.GameProp;
+import model.Game;
 import model.Map;
 
 import java.io.IOException;
@@ -37,7 +37,7 @@ public class SettingView {
     public ImageView thirdLife;
     public ImageView forthLife;
     public ImageView fifthLife;
-    ArrayList<GridPane> maps;
+    ArrayList<Map> maps;
 
     {
         redPacMan = new Image("/pictures/pacmanPic/redPacman.png");
@@ -49,7 +49,7 @@ public class SettingView {
     @FXML
     public void initialize() {
         ImageView[] pacmanLives = {firstLife, secondLife, thirdLife, forthLife, fifthLife};
-        int pacmanLifePoint = GameProp.getPacManLife();
+        int pacmanLifePoint = Game.getPacManLife();
         for (int i = 0; i < pacmanLives.length; i++) {
             if (i + 1 <= pacmanLifePoint) {
                 pacmanLives[i].setImage(yellowPacman);
@@ -60,44 +60,46 @@ public class SettingView {
                 break;
             }
         }
-        for (Map map : Map.getAllMaps()) {
-            GridPane gridMap = map.getMapPane();
-            gridMap.setStyle("-fx-border-color: white; -fx-border-width: 4");
-            gridMap.setPrefHeight(410);
-            gridMap.setPrefWidth(410);
-            gridMap.setLayoutX(431);
-            gridMap.setLayoutY(109);
-            maps.add(gridMap);
-        }
+        maps.addAll(Map.getAllMaps());
         mapSize.setText(Map.getAllMaps().get(mapNumber).getXSize() + "X" + Map.getAllMaps().get(mapNumber).getYSize());
         pointsNum.setText(String.valueOf(Map.getAllMaps().get(mapNumber).getNumberOfHouse()));
-        anchorPane.getChildren().add(maps.get(mapNumber));
+
+        addMap();
+    }
+
+    private void addMap() {
+        GridPane gridMap = maps.get(mapNumber).getMapPane();
+        gridMap.setStyle("-fx-border-color: white; -fx-border-width: 4");
+        gridMap.setLayoutX(365);
+        gridMap.setLayoutY(90);
+        anchorPane.getChildren().add(gridMap);
+
     }
 
     public void goToPrevious() {
-        anchorPane.getChildren().remove(maps.get(mapNumber));
+        anchorPane.getChildren().remove(maps.get(mapNumber).getMapPane());
         if (mapNumber != 0) {
             mapNumber--;
         } else {
             mapNumber = maps.size() - 1;
         }
         pointsNum.setText(String.valueOf(Map.getAllMaps().get(mapNumber).getNumberOfHouse()));
-        anchorPane.getChildren().add(maps.get(mapNumber));
+        addMap();
         mapSize.setText(Map.getAllMaps().get(mapNumber).getXSize() + "X" + Map.getAllMaps().get(mapNumber).getYSize());
-        GameProp.setPane(maps.get(mapNumber));
+        Game.setMap(maps.get(mapNumber));
     }
 
     public void goToNext() {
-        anchorPane.getChildren().remove(maps.get(mapNumber));
+        anchorPane.getChildren().remove(maps.get(mapNumber).getMapPane());
         if (mapNumber != maps.size() - 1) {
             mapNumber++;
         } else {
             mapNumber = 0;
         }
         pointsNum.setText(String.valueOf(Map.getAllMaps().get(mapNumber).getNumberOfHouse()));
-        anchorPane.getChildren().add(maps.get(mapNumber));
+        addMap();
         mapSize.setText(Map.getAllMaps().get(mapNumber).getXSize() + "X" + Map.getAllMaps().get(mapNumber).getYSize());
-        GameProp.setPane(maps.get(mapNumber));
+        Game.setMap(maps.get(mapNumber));
     }
 
     public void switchToWelcomePage() throws IOException {
@@ -109,7 +111,7 @@ public class SettingView {
         error.setText("");
         ImageView pacMan = (ImageView) event.getTarget();
         if (!pacMan.getImage().equals(redPacMan)) {
-            if (GameProp.getPacManLife() <= 2) {
+            if (Game.getPacManLife() <= 2) {
                 error.setStyle("-fx-text-fill: red; -fx-font-size: 13");
                 error.setText("yellowPacman life must be at least 2!");
             } else {
@@ -123,18 +125,18 @@ public class SettingView {
     }
 
     public void generateMap() {
-        anchorPane.getChildren().remove(maps.get(mapNumber));
+        anchorPane.getChildren().remove(maps.get(mapNumber).getMapPane());
         String map = MapGenerator.getMaze();
         Map newMap = new Map(map);
         GridPane newMapPane = newMap.getMapPane();
         newMapPane.setStyle("-fx-border-color: white; -fx-border-width: 4");
         newMapPane.setPrefHeight(410);
         newMapPane.setPrefWidth(410);
-        newMapPane.setLayoutX(431);
-        newMapPane.setLayoutY(109);
-        pointsNum.setText(String.valueOf(Map.getAllMaps().get(mapNumber).getNumberOfHouse()));
+        newMapPane.setLayoutX(365);
+        newMapPane.setLayoutY(90);
+        pointsNum.setText(String.valueOf(newMap.getNumberOfHouse()));
         anchorPane.getChildren().add(newMapPane);
-        mapSize.setText(27 + "X" + 27);
-        GameProp.setPane(newMapPane);
+        mapSize.setText(newMap.getXSize() + "X" + newMap.getYSize());
+        Game.setMap(newMap);
     }
 }
