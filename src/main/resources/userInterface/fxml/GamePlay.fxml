@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.GamePlayView">
-   <ImageView fx:id="life1" fitHeight="43.0" fitWidth="42.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-   <ImageView fx:id="life2" fitHeight="43.0" fitWidth="42.0" layoutX="28.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
-   <ImageView fx:id="life3" fitHeight="43.0" fitWidth="42.0" layoutX="28.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
-   <ImageView fx:id="life4" fitHeight="43.0" fitWidth="42.0" layoutX="28.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
-   <ImageView fx:id="life5" fitHeight="43.0" fitWidth="42.0" layoutX="28.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="life1" fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="life2" fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="life3" fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="life4" fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fx:id="life5" fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" />
    <Button fx:id="back" layoutX="26.0" layoutY="498.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" stylesheets="@../styleSheets/GamePlayStyleSheet.css" text="Back" />
    <Label fx:id="scoreNum" alignment="CENTER" layoutX="676.0" layoutY="36.0" prefHeight="30.0" prefWidth="103.0" style="-fx-border-color: red; -fx-font-size: 14;" text="score : 1" textFill="RED" />
 </AnchorPane>
