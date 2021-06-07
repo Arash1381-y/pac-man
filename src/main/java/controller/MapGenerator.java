@@ -19,7 +19,30 @@ public class MapGenerator {
         finder(mazeChart, 2 * 13 + 1, 2 * 13 + 1,
                 currentPlace, stacks);
 
-        int counter = 90;
+        Random random = new Random();
+        ArrayList<Integer> randoms = new ArrayList<>();
+        int counter = 20;
+        for (int i = 0; i < counter; i++) {
+            int randomHouse = random.nextInt(26 * 26 - 1);
+            if (randoms.contains(randomHouse)) {
+                i--;
+            } else {
+                if (mazeChart[(randomHouse + 1) / 27][(randomHouse + 1) % 27] != '1' && (randomHouse + 1) % 27 != 0) {
+                    i--;
+                } else {
+                    if ((randomHouse + 1) % 27 != 0) {
+                        if (mazeChart[(randomHouse) / 27][(randomHouse) % 27] == '1' && randomHouse % 27 != 0) {
+                            mazeChart[(randomHouse + 1) / 27][(randomHouse + 1) % 27] = '*';
+                            randoms.add(randomHouse);
+                        } else {
+                            i--;
+                        }
+                    } else {
+                        i--;
+                    }
+                }
+            }
+        }
         StringBuilder mazeToString = new StringBuilder();
         for (char[] chars : mazeChart) {
             for (char aChar : chars) {
@@ -30,24 +53,8 @@ public class MapGenerator {
                 }
             }
         }
-        Random random = new Random();
-        ArrayList<Integer> randoms = new ArrayList<>();
 
 
-/*        for (int i = 0; i < counter; i++) {
-            int randomHouse = random.nextInt(27 * 27);
-            if (randoms.contains(randomHouse)) {
-                i--;
-            } else {
-                if (mazeToString.charAt(randomHouse) == '0') {
-                    i--;
-                } else {
-                    mazeToString.replace(randomHouse, randomHouse, "0");
-                    randoms.add(randomHouse);
-                }
-
-            }
-        }*/
         return mazeToString.toString();
     }
 

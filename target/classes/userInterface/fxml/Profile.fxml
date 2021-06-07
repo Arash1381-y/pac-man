@@ -11,7 +11,7 @@
             style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 7;"
             stylesheets="@../styleSheets/ProfileStyleSheet.css" xmlns="http://javafx.com/javafx/16"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ProfileView">
-   <Button fx:id="back" layoutX="122.0" layoutY="442.0" mnemonicParsing="false" onAction="#switchToWelcomeScene"
+   <Button fx:id="exit" layoutX="122.0" layoutY="442.0" mnemonicParsing="false" onAction="#switchToWelcomeScene"
            prefHeight="55.0" prefWidth="58.0" text="Back" textFill="#ffbb00"/>
    <Button fx:id="records" alignment="CENTER" layoutX="113.0" layoutY="134.0" mnemonicParsing="false"
            onMouseClicked="#goToScorePage" onMouseEntered="#mouseDragEnterScore" onMouseExited="#mouseExitScore"

@@ -21,6 +21,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import model.Map;
 import model.Player;
+import model.ScoreBoardContent;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -72,10 +73,10 @@ public class WelcomeView extends Application {
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
             primaryStage.show();
-            Media musicFile = new Media(Paths.get("src/main/resources/music/test.mp3").toUri().toString());
+            Media musicFile = new Media(Paths.get("src/main/resources/music/pacman_beginning.wav").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(musicFile);
             WelcomePageController.setMedia(mediaPlayer);
-            //controller.play();
+            controller.play();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -112,6 +113,7 @@ public class WelcomeView extends Application {
     }
 
     public void switchToGame() throws IOException {
+        controller.stop();
         String address = "/userInterface/fxml/GamePlay.fxml";
         controller.moveToPage(address, setting, "playGame");
     }
@@ -125,6 +127,10 @@ public class WelcomeView extends Application {
         ArrayList<Map> allMaps = Map.getAllMaps();
         mapSaver.write(new Gson().toJson(allMaps));
         mapSaver.close();
+        FileWriter rankSaver = new FileWriter("G:/semister 2/java exercise/pac-man/src/main/resources/jsonfiles/Ranks.json");
+        ArrayList<ScoreBoardContent> allRanks = ScoreBoardContent.getAllRank();
+        rankSaver.write(new Gson().toJson(allRanks));
+        rankSaver.close();
         System.exit(0);
     }
 
@@ -149,6 +155,18 @@ public class WelcomeView extends Application {
                     }.getType()
             );
             Map.setAllPlayer(allMaps);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            String json = new String(Files.readAllBytes(Paths.get("G:/semister 2/java exercise/pac-man/src/main/resources/jsonfiles/Ranks.json")));
+            ArrayList<ScoreBoardContent> allRanks;
+            allRanks = new Gson().fromJson(json,
+                    new TypeToken<List<ScoreBoardContent>>() {
+                    }.getType()
+            );
+            ScoreBoardContent.setAllRank(allRanks);
         } catch (IOException e) {
             e.printStackTrace();
         }

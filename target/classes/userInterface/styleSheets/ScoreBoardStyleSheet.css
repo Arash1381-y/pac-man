@@ -5,7 +5,6 @@
     -fx-max-height: 470;
     -fx-min-height: 470;
     -fx-min-width: 470;
-    -fx-background-image: url(../../pictures/ticTacToeScoreBoard.jpg);
     -fx-background-size: cover;
 }
 
@@ -45,7 +44,7 @@
     -fx-translate-y: +2;
 }
 
-#back{
+#exit{
     -fx-background-color: #000000;
     -fx-pref-width: 100px;
     -fx-text-fill: #ffffff;
@@ -53,11 +52,11 @@
     -fx-cursor: hand;
 }
 
-#back:hover {
+#exit:hover {
     -fx-background-color: #ffffff;
     -fx-text-fill: #000000;
 }
-#back:pressed {
+#exit:pressed {
     -fx-translate-y: +2;
 }
 

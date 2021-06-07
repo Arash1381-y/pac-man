@@ -1,74 +1,213 @@
 package view.controllers;
 
 import controller.GamePlayController;
+import controller.MapGenerator;
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 import model.Game;
 import model.LoginUser;
+import model.Map;
+import model.MapHouse;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class GamePlayView {
-    public GamePlayController controller;
-    private static int row;
-    private static int column;
-    public Image redPacMan;
-    public Image yellowPacman;
-    public Image pacmanUp;
-    public Image pacmanDown;
-    public Image pacmanLeft;
-    public Image pacmanRight;
-    public Image pacmanClose;
+    private final Image yellowPacman;
     public AnchorPane anchorPane;
     public ImageView life1;
     public ImageView life2;
     public ImageView life3;
     public ImageView life4;
     public ImageView life5;
+    public ImageView sound;
     public GridPane gameBoard;
-    public Button back;
+    public Button exit;
     public Label scoreNum;
+    public Image unmute;
+    private GamePlayController controller;
+    private Game game;
 
     {
-        row = 0;
-        column = 0;
-        Game game = new Game(LoginUser.getPlayer());
-        redPacMan = new Image("/pictures/pacmanPic/redPacman.png");
         yellowPacman = new Image("/pictures/pacmanPic/yellowPacman.jpg");
     }
 
     @FXML
     public void initialize() {
-        controller = new GamePlayController(Game.getMap(),scoreNum);
-        ImageView[] pacmanLives = {life1, life2, life3, life4, life5};
-        int pacmanLifePoint = Game.getPacManLife();
-        for (int i = 0; i < pacmanLives.length; i++) {
-            if (i + 1 <= pacmanLifePoint) {
-                pacmanLives[i].setImage(yellowPacman);
-            }
-        }
+        game = new Game(LoginUser.getPlayer());
+        showPacmanLivesNumber();
         gameBoard = Game.getMap().getMapPane();
-        gameBoard.setStyle("-fx-border-color: red; -fx-border-width: 3");
-        gameBoard.setLayoutX(200);
-        gameBoard.setLayoutY(50);
+        refillTheMap();
+        controller = new GamePlayController(this, game, Game.getMap(), scoreNum);
+        styleGameBoard();
         anchorPane.getChildren().add(gameBoard);
     }
 
+    private void showPacmanLivesNumber() {
+        ImageView[] pacmanLives = {life1, life2, life3, life4, life5};
+        int pacmanLifePoint = game.getRemainLife();
+        for (int i = 0; i < pacmanLives.length; i++) {
+            if (i + 1 <= pacmanLifePoint) {
+                pacmanLives[i].setImage(yellowPacman);
+            } else {
+                pacmanLives[i].setImage(null);
+            }
+        }
+    }
 
-    public void switchToWelcomePage() throws IOException {
-        String address = "/userInterface/fxml/Welcome.fxml";
-        controller.moveToPage(address, back, "welcome");
+
+    public void switchToWelcomePage(MouseEvent event) throws IOException {
+        controller.pause();
+        showAlertBox(event);
     }
 
     public void pressKey(KeyCode code) {
         controller.movePacman(code);
     }
 
+    public void updatePacmanHealth() {
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setDuration(Duration.seconds(1));
+        fadeTransition.setFromValue(10);
+        fadeTransition.setToValue(0.1);
 
+        ImageView[] pacmanLives = {life1, life2, life3, life4, life5};
+        int pacmanLifePoint = game.getRemainLife();
+
+        for (int i = 0; i < pacmanLives.length; i++) {
+            if (i + 1 <= pacmanLifePoint) {
+                pacmanLives[i].setImage(yellowPacman);
+            } else {
+                fadeTransition.setNode(pacmanLives[i]);
+                break;
+            }
+        }
+        fadeTransition.play();
+        if (game.getRemainLife() == 0) {
+            controller.pause();
+            controller.finishGame();
+            anchorPane.getChildren().remove(gameBoard);
+            Label gameOverLabel = new Label();
+            gameOverLabel.setText("GAME OVER");
+            gameOverLabel.setStyle("-fx-background-color: black; -fx-border-style: solid; " +
+                    "-fx-border-color: red; -fx-border-width: 4; -fx-alignment: center; -fx-text-fill: red; -fx-font-size: 20");
+            gameOverLabel.setPrefWidth(700);
+            gameOverLabel.setLayoutX(140);
+            gameOverLabel.setLayoutY(300);
+            anchorPane.getChildren().add(gameOverLabel);
+        }
+    }
+
+    public void changeMap() {
+        Timeline changeMapAnimation = new Timeline();
+        changeMapAnimation.setCycleCount(1);
+        changeMapAnimation.getKeyFrames().add(new KeyFrame(
+                Duration.seconds(0), (ActionEvent event) -> fadeOutOldMap()));
+        changeMapAnimation.getKeyFrames().add(new KeyFrame(
+                Duration.seconds(6), (ActionEvent event) -> setNewMap()));
+        changeMapAnimation.play();
+    }
+
+    private void setNewMap() {
+        String map = MapGenerator.getMaze();
+        Map newMap = new Map(map);
+
+        gameBoard = newMap.getMapPane();
+        refillTheMap();
+        controller = new GamePlayController(this, game, newMap, scoreNum);
+        gameBoard.setVisible(true);
+        anchorPane.getChildren().add(gameBoard);
+        fadeInNewMap();
+    }
+
+    private void refillTheMap() {
+        gameBoard.getChildren().forEach(pane -> {
+                    ((MapHouse) pane).setPrefWidth(30);
+                    ((MapHouse) pane).setPrefHeight(30);
+                    ((MapHouse) pane).resetHouse();
+                }
+        );
+    }
+
+    private void fadeOutOldMap() {
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setDuration(Duration.seconds(5));
+        fadeTransition.setFromValue(10);
+        fadeTransition.setToValue(0);
+        fadeTransition.setNode(gameBoard);
+        fadeTransition.play();
+    }
+
+    private void fadeInNewMap() {
+        gameBoard.setVisible(false);
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setCycleCount(1);
+        fadeTransition.setDuration(Duration.seconds(5));
+        fadeTransition.setFromValue(0);
+        gameBoard.setVisible(true);
+        fadeTransition.setToValue(10);
+        fadeTransition.setNode(gameBoard);
+        fadeTransition.play();
+        styleGameBoard();
+    }
+
+    private void styleGameBoard() {
+        gameBoard.setPrefWidth(600);
+        gameBoard.setPrefHeight(600);
+        gameBoard.setStyle("-fx-border-color: red; -fx-border-width: 3");
+        gameBoard.setLayoutX(200);
+        gameBoard.setLayoutY(20);
+    }
+
+    public void showAlertBox(MouseEvent event) throws IOException {
+        if (game.getRemainLife() == 0){
+            controller.finishGame();
+            String address = "/userInterface/fxml/Welcome.fxml";
+            controller.moveToPage(address, exit, "welcome");
+            return;
+        }
+        ButtonType sure = new ButtonType("im sure", ButtonBar.ButtonData.OK_DONE);
+        ButtonType refuse = new ButtonType("cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+        Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION, "", sure, refuse);
+        confirmation.setTitle("DELETE ACCOUNT");
+        confirmation.setContentText("YOUR GAME IS UNFINISHED ARE U SURE U WANT TO EXIT ?");
+        confirmation.initOwner(((Node) event.getSource()).getScene().getWindow());
+        Optional<ButtonType> result = confirmation.showAndWait();
+        if (result.get() == sure) {
+            controller.finishGame();
+            String address = "/userInterface/fxml/Welcome.fxml";
+            controller.moveToPage(address, exit, "welcome");
+        } else {
+            Scene scene = exit.getScene();
+            scene.getRoot().requestFocus();
+            scene.setOnKeyPressed(event1 -> this.pressKey(event1.getCode()));
+            controller.cont();
+        }
+    }
+
+    public void clickOnSound() {
+        if (sound.getImage().equals(unmute)) {
+            controller.disableSoundEffect();
+            Image image = new Image("/pictures/musicIcon/mute.jpg");
+            sound.setImage(image);
+        } else {
+            controller.ableSoundEffect();
+            sound.setImage(unmute);
+        }
+    }
 }

@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 public class ProfileView {
-    public Button back;
+    public Button exit;
     public Button records;
     public Button changePass;
     public Button deleteAccount;

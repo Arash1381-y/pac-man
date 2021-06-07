@@ -4,46 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="random map maker">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/MapAdaptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/MapHouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-closed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-down-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-left-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-right-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-up-open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GamePlayStyleSheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/SettingStyleSheet.css" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="game logic and ghosts are added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ScoreBoardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Ghost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/MapPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Pacman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ScoreBoardContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/music/eatPacman.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/music/eatPoint.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/music/eatghost.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/music/pacman_beginning.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SettingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MapGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MapGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/GameProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapAdaptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapAdaptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/ProfileView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/ProfileView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/ScoreBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/ScoreBoardView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GameSetUpStyleSheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GameWithFriendStyleSheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Scoreboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Scoreboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ProfileStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ProfileStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ScoreBoardStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ScoreBoardStyleSheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/SettingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/SettingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/WelcomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/WelcomePageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/GameProp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/GameSetUpStyleSheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/GameWithFriendStyleSheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Scoreboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Scoreboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Welcome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ProfileStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ProfileStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ScoreBoardStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ScoreBoardStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/ProfileView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/ProfileView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/ScoreBoardController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +116,7 @@
         <option value="FxmlFile" />
         <option value="CSS File" />
         <option value="Enum" />
+        <option value="WLTest" />
         <option value="Class" />
       </list>
     </option>
@@ -141,7 +154,9 @@
     <option name="height" value="876" />
   </component>
   <component name="ProjectId" id="1sUg7CX6W8yh8quuwY1ZkNA9PHi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -204,7 +219,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/PacMan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/music" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -216,14 +231,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\music" />
+      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\ghostPic\ghostInGame" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\java\view\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\music" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\pacmanPic\pacManGamePic" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\pacmanPic" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\jsonfiles" />
       <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures\music" />
-      <recent name="G:\semister 2\java exercise\pac-man\src\main\resources\pictures" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -373,6 +390,20 @@
       <workItem from="1622431736201" duration="8001000" />
       <workItem from="1622475250789" duration="2610000" />
       <workItem from="1622479278552" duration="119000" />
+      <workItem from="1622479437541" duration="176000" />
+      <workItem from="1622479633209" duration="2478000" />
+      <workItem from="1622501798273" duration="80000" />
+      <workItem from="1622530603954" duration="2758000" />
+      <workItem from="1622569406060" duration="4880000" />
+      <workItem from="1622586052419" duration="8878000" />
+      <workItem from="1622691060374" duration="1733000" />
+      <workItem from="1622775478192" duration="12105000" />
+      <workItem from="1622850057864" duration="20328000" />
+      <workItem from="1622908340265" duration="5541000" />
+      <workItem from="1622923550720" duration="2500000" />
+      <workItem from="1622932678913" duration="7186000" />
+      <workItem from="1623084785762" duration="17000" />
+      <workItem from="1623084821251" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="complete setting">
       <created>1622256724584</created>
@@ -395,7 +426,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622262983693</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pacman movement and animation added">
+      <created>1622479484814</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622479484814</updated>
+    </task>
+    <task id="LOCAL-00005" summary="game logic and ghosts are added">
+      <created>1622606271337</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622606271337</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -452,7 +497,9 @@
     <MESSAGE value="tic tac toe game (the AI Part will be added soon)" />
     <MESSAGE value="complete setting" />
     <MESSAGE value="random map maker" />
-    <option name="LAST_COMMIT_MESSAGE" value="random map maker" />
+    <MESSAGE value="pacman movement and animation added" />
+    <MESSAGE value="game logic and ghosts are added" />
+    <option name="LAST_COMMIT_MESSAGE" value="game logic and ghosts are added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

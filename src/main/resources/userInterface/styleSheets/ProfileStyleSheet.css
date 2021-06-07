@@ -4,13 +4,13 @@
     -fx-font-size: 12;
 }
 
-#back {
+#exit {
     -fx-background-color: blue;
     -fx-text-fill: white;
     -fx-border-color: white;
 }
 
-#back:hover {
+#exit:hover {
     -fx-background-color: white;
     -fx-text-fill: blue;
     -fx-border-color: blue;

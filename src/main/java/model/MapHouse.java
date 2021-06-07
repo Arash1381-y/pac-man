@@ -2,50 +2,26 @@ package model;
 
 import javafx.scene.layout.AnchorPane;
 
-import java.util.ArrayList;
+public class MapHouse extends AnchorPane {
 
-public class MapHouse {
-    private static ArrayList<MapHouse> allMapHouses;
-
-    static {
-        allMapHouses = new ArrayList<>();
-    }
-
-    AnchorPane pane;
     int row;
     int column;
     boolean isHereBefore;
+    boolean isWall;
+    private MapPoint housePoint;
 
     {
         isHereBefore = false;
+        isWall = true;
     }
 
-    public MapHouse(int row, int column, AnchorPane pane) {
-        this.pane = pane;
+    public MapHouse(int row, int column) {
         this.row = row;
         this.column = column;
-        allMapHouses.add(this);
-    }
-
-    public static MapHouse getMapHouseByDir(int row, int column) {
-        for (MapHouse mapHouse : allMapHouses) {
-            if (mapHouse.row == row && mapHouse.column == column) {
-                return mapHouse;
-            }
-        }
-        return null;
-    }
-
-    public static void clear() {
-        allMapHouses.clear();
     }
 
     public boolean isHereBefore() {
         return isHereBefore;
-    }
-
-    public void setHereBefore() {
-        isHereBefore = true;
     }
 
     public int getColumn() {
@@ -57,6 +33,33 @@ public class MapHouse {
     }
 
     public AnchorPane getPane() {
-        return pane;
+        return this;
+    }
+
+    public void eatHousePoint() {
+        isHereBefore = true;
+        this.getChildren().remove(housePoint);
+    }
+
+    public void setHousePoint(MapPoint housePoint) {
+        isWall = false;
+        this.getChildren().add(housePoint);
+        this.housePoint = housePoint;
+    }
+
+    public boolean isWall() {
+        return isWall;
+    }
+
+    public void resetHouse() {
+        isHereBefore = false;
+        this.getChildren().clear();
+        if (!isWall) {
+            this.getChildren().add(housePoint);
+        }
+    }
+
+    public MapPoint getHousePoint() {
+        return housePoint;
     }
 }

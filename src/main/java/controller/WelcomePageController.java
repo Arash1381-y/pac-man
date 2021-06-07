@@ -13,7 +13,9 @@ public class WelcomePageController extends Controller {
     }
 
     public static void setMedia(MediaPlayer mediaPlayer) {
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
         WelcomePageController.mediaPlayer = mediaPlayer;
+
     }
 
     public static boolean isIsMusicPlaying() {

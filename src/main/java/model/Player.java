@@ -3,19 +3,14 @@ package model;
 import java.util.ArrayList;
 
 public class Player {
-    static ArrayList<Player> allPlayer;
+    private static ArrayList<Player> allPlayer;
 
     static {
         allPlayer = new ArrayList<>();
     }
 
-    String name;
-    String password;
-    int score;
-
-    {
-        score = 0;
-    }
+    private final String name;
+    private String password;
 
     public Player(String name, String password) {
         this.name = name;
@@ -46,10 +41,6 @@ public class Player {
 
     public boolean isPasswordCorrect(String password) {
         return password.equals(this.password);
-    }
-
-    public int getScore() {
-        return score;
     }
 
     public void setNewPassword(String password) {

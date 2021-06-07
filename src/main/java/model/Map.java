@@ -1,5 +1,6 @@
 package model;
 
+import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
@@ -75,6 +76,17 @@ public class Map {
 
     public GridPane getMapPane() {
         return MapAdaptor.getBoardWithMap(this);
+    }
+
+    public MapHouse getMapHouse(int row, int column) {
+        GridPane mapPane = getMapPane();
+        for (Node node : mapPane.getChildren()) {
+            MapHouse mapHouse = (MapHouse) node;
+            if (mapHouse.getRow() == row && mapHouse.getColumn() == column) {
+                return mapHouse;
+            }
+        }
+        return null;
     }
 
     public ArrayList<Integer> getBombsLoc() {

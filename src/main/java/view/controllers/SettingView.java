@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Polygon;
 import model.Game;
 import model.Map;
+import model.MapHouse;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class SettingView {
 
     private void addMap() {
         GridPane gridMap = maps.get(mapNumber).getMapPane();
+        setMapSize(gridMap);
         gridMap.setStyle("-fx-border-color: white; -fx-border-width: 4");
         gridMap.setLayoutX(365);
         gridMap.setLayoutY(90);
@@ -129,6 +131,7 @@ public class SettingView {
         String map = MapGenerator.getMaze();
         Map newMap = new Map(map);
         GridPane newMapPane = newMap.getMapPane();
+        setMapSize(newMapPane);
         newMapPane.setStyle("-fx-border-color: white; -fx-border-width: 4");
         newMapPane.setPrefHeight(410);
         newMapPane.setPrefWidth(410);
@@ -138,5 +141,15 @@ public class SettingView {
         anchorPane.getChildren().add(newMapPane);
         mapSize.setText(newMap.getXSize() + "X" + newMap.getYSize());
         Game.setMap(newMap);
+    }
+
+    private void setMapSize(GridPane newMapPane) {
+        newMapPane.setPrefHeight(410);
+        newMapPane.setPrefWidth(410);
+        newMapPane.getChildren().forEach(pane -> {
+            ((AnchorPane) pane).setPrefWidth(16.38518518518519);
+            ((AnchorPane) pane).setPrefHeight(16.38518518518519);
+            ((MapHouse) pane).resetHouse();
+        });
     }
 }
