@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Ghost {
-    private final Group ghost;
+    private Group ghost;
     private Direction ghostLastMoveDirection;
     private MapHouse ghostHouse;
     private final ImageView ghostPic;
@@ -68,5 +68,9 @@ public class Ghost {
 
     public int getGhostSafeHouseColumn() {
         return ghostSafeHouseColumn;
+    }
+
+    public void removeGhost(){
+        ghost = null;
     }
 }

@@ -15,9 +15,16 @@
         <javafx.maven.plugin.version>0.0.6</javafx.maven.plugin.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx.media -->
+              <!-- https://mvnrepository.com/artifact/org.openjfx/javafx.media -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
@@ -47,6 +54,9 @@
         </dependency>
 
     </dependencies>
+
+
+
     <build>
         <plugins>
             <plugin>

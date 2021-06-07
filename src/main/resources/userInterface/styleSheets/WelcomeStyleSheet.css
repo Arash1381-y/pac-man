@@ -1,7 +1,7 @@
 
 .root {
     -fx-border-style: solid;
-    -fx-background-image:url(/pictures/pagebackground/mainPageBackGround.jpg) ;
+    -fx-background-image:url(/pictures/pagebackground/welcomePage.jpg) ;
     -fx-background-size: cover;
     -fx-border-color: white;
     -fx-background-color: black;
@@ -9,32 +9,18 @@
 
 .option {
     -fx-font-size: 15;
-    -fx-text-fill: black;
     -fx-font-weight: bold;
-    -fx-border-width: 5;
-    -fx-border-radius: 2000;
-    -fx-border-color: black;
-    -fx-background-color: white;
+    -fx-border-width: 2;
+    -fx-border-radius: 11;
+    -fx-background-color: black;
 }
 
 #Title{
     -fx-background-color: black;
-    -fx-background-radius: 20;
-    -fx-border-color: white ;
-    -fx-border-radius: 20;
-    -fx-text-fill: white;
+    -fx-background-radius: 11;
+    -fx-border-radius: 11;
 }
 
-.option:hover {
-    -fx-border-radius: 2000;
-    -fx-border-color:  white;
-    -fx-text-fill: white;
-    -fx-background-color: black;
-}
-
-.option:pressed {
-    -fx-translate-y: +2;
-}
 
 
 

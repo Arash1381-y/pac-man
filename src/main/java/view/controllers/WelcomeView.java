@@ -1,6 +1,8 @@
 package view.controllers;
 
 
+import animatefx.animation.FadeIn;
+import animatefx.animation.Tada;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import controller.WelcomePageController;
@@ -19,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import model.LoginUser;
 import model.Map;
 import model.Player;
 import model.ScoreBoardContent;
@@ -33,7 +36,6 @@ import java.util.Objects;
 
 public class WelcomeView extends Application {
 
-    public Label Title;
     public Button login;
     public Button register;
     public Button scoreBoard;
@@ -44,6 +46,7 @@ public class WelcomeView extends Application {
     public Image unmute;
     public Button setting;
     public Button play;
+    public Label loginUser;
     Parent parent;
     Scene scene;
     Stage stage;
@@ -52,12 +55,26 @@ public class WelcomeView extends Application {
         controller = new WelcomePageController();
     }
 
+    public void playMusic() {
+        if (!WelcomePageController.isSoundMuted()) {
+            controller.play();
+            sound.setImage(new Image("/pictures/musicIcon/unmute.jpg"));
+        }
+    }
+
     public void run(String[] args) {
         launch(args);
     }
 
     @FXML
     public void initialize() {
+        if (LoginUser.getPlayer() != null) {
+            loginUser.setStyle("-fx-text-fill: green");
+            loginUser.setText("Login User : " + LoginUser.getPlayer().getName());
+        } else {
+            loginUser.setStyle("-fx-text-fill: red");
+            loginUser.setText("No User Login yet");
+        }
         if (!WelcomePageController.isIsMusicPlaying()) {
             sound.setImage(new Image("/pictures/musicIcon/mute.jpg"));
         }
@@ -73,6 +90,7 @@ public class WelcomeView extends Application {
             Scene scene = new Scene(parent);
             primaryStage.setScene(scene);
             primaryStage.show();
+            new FadeIn(parent).play();
             Media musicFile = new Media(Paths.get("src/main/resources/music/pacman_beginning.wav").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(musicFile);
             WelcomePageController.setMedia(mediaPlayer);
@@ -92,12 +110,10 @@ public class WelcomeView extends Application {
         controller.moveToPage(address, profile, "register");
     }
 
-
     public void switchToProfileScene() throws IOException {
         String address = "/userInterface/fxml/Profile.fxml";
         controller.moveToPage(address, profile, "profile");
     }
-
 
     public void switchToScoreBoard(MouseEvent event) throws IOException {
         parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/userInterface/fxml/ScoreBoard.fxml")));
@@ -175,13 +191,18 @@ public class WelcomeView extends Application {
 
     public void clickOnSound() {
         if (sound.getImage().equals(unmute)) {
+            controller.setIsSoundMuted(true);
             controller.stop();
             Image image = new Image("/pictures/musicIcon/mute.jpg");
             sound.setImage(image);
         } else {
             controller.play();
+            controller.setIsSoundMuted(false);
             sound.setImage(unmute);
         }
     }
 
+    public void hoverAnimation(MouseEvent event) {
+        new Tada((Node) event.getSource()).play();
+    }
 }

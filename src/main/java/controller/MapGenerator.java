@@ -19,28 +19,19 @@ public class MapGenerator {
         finder(mazeChart, 2 * 13 + 1, 2 * 13 + 1,
                 currentPlace, stacks);
 
-        Random random = new Random();
-        ArrayList<Integer> randoms = new ArrayList<>();
-        int counter = 20;
+        int counter = 30;
         for (int i = 0; i < counter; i++) {
-            int randomHouse = random.nextInt(26 * 26 - 1);
-            if (randoms.contains(randomHouse)) {
-                i--;
-            } else {
-                if (mazeChart[(randomHouse + 1) / 27][(randomHouse + 1) % 27] != '1' && (randomHouse + 1) % 27 != 0) {
-                    i--;
-                } else {
-                    if ((randomHouse + 1) % 27 != 0) {
-                        if (mazeChart[(randomHouse) / 27][(randomHouse) % 27] == '1' && randomHouse % 27 != 0) {
-                            mazeChart[(randomHouse + 1) / 27][(randomHouse + 1) % 27] = '*';
-                            randoms.add(randomHouse);
-                        } else {
-                            i--;
-                        }
-                    } else {
-                        i--;
-                    }
+            int randRow = randNum();
+            int randColumn = randNum();
+            if (mazeChart[randRow][randColumn] == '1') {
+                if (mazeChart[randRow][randColumn - 1] == '1' ||
+                        mazeChart[randRow][randColumn + 1] == '1' ||
+                        mazeChart[randRow - 1][randColumn] == '1' ||
+                        mazeChart[randRow + 1][randColumn] == '1') {
+                    mazeChart[randRow][randColumn] = '0';
                 }
+            } else {
+                i--;
             }
         }
         StringBuilder mazeToString = new StringBuilder();
@@ -220,5 +211,10 @@ public class MapGenerator {
 
         leftNeighbor.set(0, currentPlace.get(0));
         leftNeighbor.set(1, currentPlace.get(1) - 2);
+    }
+
+    private static int randNum() {
+        Random rand = new Random();
+        return rand.nextInt((25 - 1) + 1) + 1;
     }
 }

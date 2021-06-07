@@ -1,5 +1,6 @@
 package view.controllers;
 
+import animatefx.animation.Hinge;
 import controller.GamePlayController;
 import controller.MapGenerator;
 import javafx.animation.FadeTransition;
@@ -17,10 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.util.Duration;
-import model.Game;
-import model.LoginUser;
-import model.Map;
-import model.MapHouse;
+import model.*;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -38,6 +36,7 @@ public class GamePlayView {
     public Button exit;
     public Label scoreNum;
     public Image unmute;
+    public Label playerInGameName;
     private GamePlayController controller;
     private Game game;
 
@@ -47,12 +46,19 @@ public class GamePlayView {
 
     @FXML
     public void initialize() {
+        Player player;
+        if ((player = LoginUser.getPlayer()) == null) {
+            playerInGameName.setText("Player : Guest");
+        } else {
+            playerInGameName.setText("Player : " + player.getName());
+        }
         game = new Game(LoginUser.getPlayer());
         showPacmanLivesNumber();
         gameBoard = Game.getMap().getMapPane();
         refillTheMap();
-        controller = new GamePlayController(this, game, Game.getMap(), scoreNum);
+        controller = new GamePlayController(this, game, Game.getMap(), scoreNum, false);
         styleGameBoard();
+        fadeInNewMap();
         anchorPane.getChildren().add(gameBoard);
     }
 
@@ -70,6 +76,7 @@ public class GamePlayView {
 
 
     public void switchToWelcomePage(MouseEvent event) throws IOException {
+        controller.deleteGhost();
         controller.pause();
         showAlertBox(event);
     }
@@ -78,13 +85,7 @@ public class GamePlayView {
         controller.movePacman(code);
     }
 
-    public void updatePacmanHealth() {
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setCycleCount(1);
-        fadeTransition.setDuration(Duration.seconds(1));
-        fadeTransition.setFromValue(10);
-        fadeTransition.setToValue(0.1);
-
+    public void reducePacmanHealth() {
         ImageView[] pacmanLives = {life1, life2, life3, life4, life5};
         int pacmanLifePoint = game.getRemainLife();
 
@@ -92,11 +93,10 @@ public class GamePlayView {
             if (i + 1 <= pacmanLifePoint) {
                 pacmanLives[i].setImage(yellowPacman);
             } else {
-                fadeTransition.setNode(pacmanLives[i]);
+                new Hinge(pacmanLives[i]).play();
                 break;
             }
         }
-        fadeTransition.play();
         if (game.getRemainLife() == 0) {
             controller.pause();
             controller.finishGame();
@@ -123,12 +123,13 @@ public class GamePlayView {
     }
 
     private void setNewMap() {
+        controller.pause();
+        controller.deleteGhost();
         String map = MapGenerator.getMaze();
         Map newMap = new Map(map);
-
         gameBoard = newMap.getMapPane();
         refillTheMap();
-        controller = new GamePlayController(this, game, newMap, scoreNum);
+        controller = new GamePlayController(this, game, newMap, scoreNum, controller.isSoundEffectDisable());
         gameBoard.setVisible(true);
         anchorPane.getChildren().add(gameBoard);
         fadeInNewMap();
@@ -151,6 +152,7 @@ public class GamePlayView {
         fadeTransition.setToValue(0);
         fadeTransition.setNode(gameBoard);
         fadeTransition.play();
+
     }
 
     private void fadeInNewMap() {
@@ -167,15 +169,15 @@ public class GamePlayView {
     }
 
     private void styleGameBoard() {
-        gameBoard.setPrefWidth(600);
-        gameBoard.setPrefHeight(600);
+        gameBoard.setPrefWidth(530);
+        gameBoard.setPrefHeight(530);
         gameBoard.setStyle("-fx-border-color: red; -fx-border-width: 3");
         gameBoard.setLayoutX(200);
-        gameBoard.setLayoutY(20);
+        gameBoard.setLayoutY(80);
     }
 
     public void showAlertBox(MouseEvent event) throws IOException {
-        if (game.getRemainLife() == 0){
+        if (game.getRemainLife() == 0) {
             controller.finishGame();
             String address = "/userInterface/fxml/Welcome.fxml";
             controller.moveToPage(address, exit, "welcome");
@@ -203,7 +205,7 @@ public class GamePlayView {
     public void clickOnSound() {
         if (sound.getImage().equals(unmute)) {
             controller.disableSoundEffect();
-            Image image = new Image("/pictures/musicIcon/mute.jpg");
+            Image image = new Image("/pictures/musicIcon/sound off.png");
             sound.setImage(image);
         } else {
             controller.ableSoundEffect();

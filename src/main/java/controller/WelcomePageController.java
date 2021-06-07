@@ -7,9 +7,11 @@ import model.MapAdaptor;
 public class WelcomePageController extends Controller {
     private static MediaPlayer mediaPlayer;
     private static boolean isMusicPlaying;
+    private static boolean isSoundMuted;
 
     static {
         isMusicPlaying = true;
+        isSoundMuted = false;
     }
 
     public static void setMedia(MediaPlayer mediaPlayer) {
@@ -20,6 +22,14 @@ public class WelcomePageController extends Controller {
 
     public static boolean isIsMusicPlaying() {
         return isMusicPlaying;
+    }
+
+    public static boolean isSoundMuted() {
+        return isSoundMuted;
+    }
+
+    public  void setIsSoundMuted(boolean value) {
+        isSoundMuted = value;
     }
 
     public void play() {

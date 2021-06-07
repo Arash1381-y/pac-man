@@ -5,27 +5,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="863.0" stylesheets="/userInterface/styleSheets/WelcomeStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.WelcomeView">
-
-    <Label fx:id="Title" alignment="CENTER" layoutX="639.0" layoutY="76.0" prefHeight="55.0" prefWidth="178.0" rotate="30.4" text="PAC MAN">
-        <font>
-            <Font size="20.0" />
-        </font>
-    </Label>
-    <Button layoutX="58.0" layoutY="462.0" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="88.0" style="-fx-background-radius: 2000;" styleClass="option" stylesheets="@../styleSheets/WelcomeStyleSheet.css" text="Exit" />
-    <Button fx:id="register" layoutX="33.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#switchToRegisterScene" prefHeight="86.0" prefWidth="88.0" rotate="-46.8" style="-fx-background-radius: 2000;" styleClass="option" text="Sing up" />
-    <Button fx:id="login" layoutX="124.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#switchToLoginScene" prefHeight="74.0" prefWidth="78.0" rotate="24.6" style="-fx-background-radius: 2000;" styleClass="option" text="Login" />
-    <Button fx:id="scoreBoard" layoutX="124.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#switchToScoreBoard" prefHeight="73.0" prefWidth="78.0" rotate="28.3" style="-fx-background-radius: 2000;" styleClass="option" text="Scores" />
-    <Button fx:id="profile" layoutX="24.0" layoutY="159.0" mnemonicParsing="false" onMouseClicked="#switchToProfileScene" prefHeight="74.0" prefWidth="78.0" rotate="-31.9" style="-fx-background-radius: 2000;" styleClass="option" text="Profile" />
-    <AnchorPane layoutX="760.0" layoutY="35.0" prefHeight="42.0" prefWidth="46.0"
-                style="-fx-background-radius: 200; -fx-background-color: white; -fx-border-color: white; -fx-border-radius: 200;">
-        <ImageView fx:id="sound" fitHeight="23.0" fitWidth="25.0" layoutX="11.0" layoutY="11.0"
-                   onMouseClicked="#clickOnSound" pickOnBounds="true" preserveRatio="true">
-            <Image fx:id="unmute" url="@../../pictures/musicIcon/unmute.jpg"/>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="863.0" stylesheets="@../styleSheets/WelcomeStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.WelcomeView">
+    <Button layoutX="38.0" layoutY="462.0" mnemonicParsing="false" onAction="#exit" onMouseEntered="#hoverAnimation" prefHeight="36.0" prefWidth="86.0" style="-fx-border-color: red;" styleClass="option" text="Exit" textFill="RED" />
+    <Button fx:id="register" layoutX="36.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#switchToRegisterScene" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="86.0" style="-fx-border-color: #ffa1b9;" styleClass="option" text="Sing up" textFill="#ffa1b9" />
+    <Button fx:id="login" layoutX="36.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#switchToLoginScene" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="86.0" style="-fx-border-color: #11f409;" styleClass="option" text="Login" textFill="#11f409" />
+    <Button fx:id="scoreBoard" layoutX="36.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#switchToScoreBoard" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="86.0" style="-fx-border-color: #18b0df;" styleClass="option" text="Scores" textFill="#18b0df" />
+    <Button fx:id="profile" layoutX="38.0" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#switchToProfileScene" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="86.0" style="-fx-border-color: #ef3a3a;" styleClass="option" text="Profile" textFill="#ef3a3a" />
+    <AnchorPane layoutX="760.0" layoutY="35.0" prefHeight="42.0" prefWidth="46.0" style="-fx-background-radius: 200; -fx-background-color: white; -fx-border-color: white; -fx-border-radius: 200;">
+        <ImageView fx:id="sound" fitHeight="23.0" fitWidth="25.0" layoutX="11.0" layoutY="11.0" onMouseClicked="#clickOnSound" pickOnBounds="true" preserveRatio="true">
+            <Image fx:id="unmute" url="@../../pictures/musicIcon/unmute.jpg" />
         </ImageView>
     </AnchorPane>
-   <Button fx:id="setting" layoutX="30.0" layoutY="247.0" mnemonicParsing="false" onAction="#switchToSetting" onMouseClicked="#switchToProfileScene" prefHeight="78.0" prefWidth="81.0" rotate="-29.1" style="-fx-background-radius: 2000;" styleClass="option" text="Setting" />
-   <Button fx:id="play" layoutX="124.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#switchToGame" prefHeight="73.0" prefWidth="78.0" rotate="41.3" style="-fx-background-radius: 2000;" styleClass="option" text="play" />
+   <Button fx:id="setting" layoutX="38.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchToSetting" onMouseClicked="#switchToProfileScene" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="86.0" style="-fx-border-color: #e112db;" styleClass="option" text="Setting" textFill="#e112db" />
+   <Button fx:id="play" layoutX="36.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#switchToGame" onMouseEntered="#hoverAnimation" prefHeight="42.0" prefWidth="85.0" style="-fx-border-color: #e1b00e;" styleClass="option" text="play" textFill="#e1b00e" />
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="332.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../pictures/pagebackground/neonSign.jpg" />
+      </image>
+   </ImageView>
+   <Label fx:id="loginUser" layoutX="36.0" layoutY="35.0" prefHeight="18.0" prefWidth="102.0" text="No User Login yet" textFill="RED" />
 </AnchorPane>
