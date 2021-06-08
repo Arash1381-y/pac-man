@@ -2,8 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="673.0" stylesheets="/userInterface/styleSheets/ScoreBoardStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ScoreBoardView">
-    <Label fx:id="title" alignment="CENTER" layoutX="261.0" layoutY="34.0" prefHeight="50.0" prefWidth="150.0" text="SCORE BOARD" />
-    <Button layoutX="562.0" layoutY="336.0" mnemonicParsing="false" onAction="#switchToWelcomeScene" text="Back" />
+
+<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0" stylesheets="/userInterface/stylesheets/ScoreBoardStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ScoreBoardView">
+    <Label fx:id="title" alignment="CENTER" layoutX="365.0" layoutY="26.0" prefHeight="50.0" prefWidth="150.0" text="TOP PLAYER " />
+    <Button layoutX="803.0" layoutY="455.0" mnemonicParsing="false" onAction="#switchToWelcomeScene" text="Back" />
+   <TableView fx:id="scoreBoard" layoutX="240.0" layoutY="94.0" prefHeight="393.0" prefWidth="400.0" />
 </AnchorPane>

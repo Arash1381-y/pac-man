@@ -1,8 +1,11 @@
 package controller;
 
+import animatefx.animation.FadeIn;
+import animatefx.animation.FadeOut;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -17,7 +20,9 @@ import java.io.IOException;
 public class LoginController extends Controller {
     public void loginUser(String name, String password, Label error, TextField username, TextField userPass) throws IOException {
         if (name.equals("") || password.equals("")) {
-            error.setText("please fill the form first!!");
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setContentText("please fill all the fields");
+            errorAlert.show();
             return;
         }
         for (Player player : Player.getAllPlayer()) {
@@ -25,17 +30,19 @@ public class LoginController extends Controller {
                 if (player.isPasswordCorrect(password)) {
                     LoginUser.setCurrentPlayer(player);
                     String address = "/userInterface/fxml/Welcome.fxml";
-                    moveToPage(address , error, "welcome");
+                    moveToPage(address, error, "welcome");
                     return;
                 } else {
-                    error.setStyle("-fx-text-fill: #ff0909;-fx-font-size: 12");
-                    error.setText("incorrect password !!!!");
+                    Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                    errorAlert.setContentText("incorrect password");
+                    errorAlert.show();
                 }
                 return;
             }
         }
-        error.setStyle("-fx-text-fill: #ff0909;-fx-font-size: 12");
-        error.setText("no user find !!!");
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setContentText("no user find !");
+        errorAlert.show();
         username.clear();
         userPass.clear();
     }
@@ -71,7 +78,11 @@ public class LoginController extends Controller {
     }
 
     public void changePic(ImageView node) {
-        Image image = new Image("pictures/ghostPic/ghostPic.png");
+        FadeOut fadeOut = new FadeOut(node);
+        FadeIn fadeIn = new FadeIn(node);
+        fadeOut.playOnFinished(fadeIn);
+        fadeIn.play();
+        Image image = new Image("pictures/ghostPicInMenus/ghostPic.png");
         node.setImage(image);
     }
 }

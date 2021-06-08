@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0"
             style="-fx-background-color: white; -fx-border-color: blue; -fx-border-width: 7;"
-            stylesheets="@../styleSheets/ProfileStyleSheet.css" xmlns="http://javafx.com/javafx/16"
+            stylesheets="@../stylesheets/ProfileStyleSheet.css" xmlns="http://javafx.com/javafx/16"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ProfileView">
    <Button fx:id="exit" layoutX="122.0" layoutY="442.0" mnemonicParsing="false" onAction="#switchToWelcomeScene"
            prefHeight="55.0" prefWidth="58.0" text="Back" textFill="#ffbb00"/>
@@ -25,15 +25,15 @@
            prefHeight="66.0" prefWidth="68.0" text="Delete account" wrapText="true"/>
    <ImageView fx:id="blueGhost" fitHeight="55.0" fitWidth="58.0" layoutX="194.0" layoutY="146.0" pickOnBounds="true"
               preserveRatio="true">
-      <Image url="@../../pictures/ghostPic/blueGhost.png"/>
+      <Image url="@../../pictures/ghostPicInMenus/blueGhost.png"/>
    </ImageView>
    <ImageView fx:id="pinkGhost" fitHeight="55.0" fitWidth="58.0" layoutX="269.0" layoutY="242.0" pickOnBounds="true"
               preserveRatio="true">
-      <Image url="@../../pictures/ghostPic/pinkGhost.png"/>
+      <Image url="@../../pictures/ghostPicInMenus/pinkGhost.png"/>
    </ImageView>
    <ImageView fx:id="redGhost" fitHeight="55.0" fitWidth="58.0" layoutX="340.0" layoutY="335.0" pickOnBounds="true"
               preserveRatio="true">
-      <Image url="@../../pictures/ghostPic/redGhost.png"/>
+      <Image url="@../../pictures/ghostPicInMenus/redGhost.png"/>
    </ImageView>
    <Line endX="522.4000244140625" layoutX="224.0" layoutY="202.0" startX="-71.20001220703125" stroke="#00fff2"
          style="-fx-stroke-width: 2;"/>

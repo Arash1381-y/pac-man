@@ -7,7 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import view.controllers.*;
+import view.controllers.GamePlayView;
+import view.controllers.WelcomeView;
 
 import java.io.IOException;
 
@@ -18,7 +19,6 @@ public abstract class Controller {
         Stage stage;
         Scene scene;
         FXMLLoader loader = new FXMLLoader(getClass().getResource(address));
-        Scene current = node.getScene();
         parent = loader.load();
         stage = (Stage) node.getScene().getWindow();
         if (!type.equals("playGame")) {
@@ -39,37 +39,15 @@ public abstract class Controller {
                 new SlideInDown(parent).play();
                 WelcomeView controller = loader.getController();
                 controller.playMusic();
-                controller.anchorPane.resize(863.0, 555.0);
                 break;
             }
-            case "login": {
+            case "login":
+            case "register":
+            case "profile":
+            case "changePass":
+            case "setting":
+            case "scoreBoard": {
                 new SlideInRight(parent).play();
-                LoginUserView controller = loader.getController();
-                controller.anchorPane.resize(863.0, 555.0);
-                break;
-            }
-            case "register": {
-                new SlideInRight(parent).play();
-                RegisterView controller = loader.getController();
-                controller.anchorPane.resize(863.0, 555.0);
-                break;
-            }
-            case "profile": {
-                new SlideInRight(parent).play();
-                ProfileView controller = loader.getController();
-                controller.anchorPane.resize(863.0, 555.0);
-                break;
-            }
-            case "changePass": {
-                new SlideInRight(parent).play();
-                ChangePassView controller = loader.getController();
-                controller.anchorPane.resize(863.0, 555.0);
-                break;
-            }
-            case "setting": {
-                new SlideInRight(parent).play();
-                SettingView controller = loader.getController();
-                controller.anchorPane.resize(863.0, 555.0);
                 break;
             }
             case "playGame": {

@@ -82,6 +82,9 @@ public class WelcomeView extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Image icon = new Image("/pictures/ghostPicInMenus/pinkGhost.png");
+        primaryStage.getIcons().add(icon);
+        primaryStage.setResizable(false);
         readData();
         controller.createMaps();
         try {
@@ -91,7 +94,7 @@ public class WelcomeView extends Application {
             primaryStage.setScene(scene);
             primaryStage.show();
             new FadeIn(parent).play();
-            Media musicFile = new Media(Paths.get("src/main/resources/music/pacman_beginning.wav").toUri().toString());
+            Media musicFile = new Media(Paths.get("src/main/resources/music&soundeffect/pacman_beginning.wav").toUri().toString());
             MediaPlayer mediaPlayer = new MediaPlayer(musicFile);
             WelcomePageController.setMedia(mediaPlayer);
             controller.play();
@@ -115,12 +118,9 @@ public class WelcomeView extends Application {
         controller.moveToPage(address, profile, "profile");
     }
 
-    public void switchToScoreBoard(MouseEvent event) throws IOException {
-        parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/userInterface/fxml/ScoreBoard.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(parent, 700, 500);
-        stage.setScene(scene);
-        stage.show();
+    public void switchToScoreBoard() throws IOException {
+        String address = "/userInterface/fxml/Scoreboard.fxml";
+        controller.moveToPage(address, setting, "scoreBoard");
     }
 
     public void switchToSetting() throws IOException {

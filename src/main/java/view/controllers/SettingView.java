@@ -41,8 +41,8 @@ public class SettingView {
     ArrayList<Map> maps;
 
     {
-        redPacMan = new Image("/pictures/pacmanPic/redPacman.png");
-        yellowPacman = new Image("/pictures/pacmanPic/yellowPacman.jpg");
+        redPacMan = new Image("/pictures/gameplaypic/redPacman.png");
+        yellowPacman = new Image("/pictures/gameplaypic/yellowPacman.jpg");
         control = new SettingController();
         maps = new ArrayList<>();
     }

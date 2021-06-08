@@ -12,11 +12,11 @@ public class Pacman {
     private final static Image MOUTH_CLOSE;
 
     static {
-        MOUTH_CLOSE = new Image("/pictures/pacmanPic/pacManGamePic/packman-closed.png");
-        MOUTH_UP = new Image("/pictures/pacmanPic/pacManGamePic/packman-up-open.png");
-        MOUTH_DOWN = new Image("/pictures/pacmanPic/pacManGamePic/packman-down-open.png");
-        MOUTH_RIGHT = new Image("/pictures/pacmanPic/pacManGamePic/packman-right-open.png");
-        MOUTH_LEFT = new Image("/pictures/pacmanPic/pacManGamePic/packman-left-open.png");
+        MOUTH_CLOSE = new Image("/pictures/gameplaypic/pacManGamePic/packman-closed.png");
+        MOUTH_UP = new Image("/pictures/gameplaypic/pacManGamePic/packman-up-open.png");
+        MOUTH_DOWN = new Image("/pictures/gameplaypic/pacManGamePic/packman-down-open.png");
+        MOUTH_RIGHT = new Image("/pictures/gameplaypic/pacManGamePic/packman-right-open.png");
+        MOUTH_LEFT = new Image("/pictures/gameplaypic/pacManGamePic/packman-left-open.png");
     }
 
     private final Group pacman;

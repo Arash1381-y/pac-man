@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0" styleClass="chart" stylesheets="@../styleSheets/RegisterStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.RegisterView">
-   <VBox fx:id="chart" alignment="TOP_CENTER" layoutX="523.0" layoutY="153.0" prefHeight="200.0" prefWidth="281.0" styleClass="chart" stylesheets="@../styleSheets/RegisterStyleSheet.css">
-      <Label alignment="CENTER" prefHeight="22.0" prefWidth="60.0" style="-fx-font-size: 16;" stylesheets="@../styleSheets/RegisterStyleSheet.css" text="Register" textAlignment="CENTER" />
+<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0" styleClass="chart" stylesheets="@../stylesheets/RegisterStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.RegisterView">
+   <VBox fx:id="chart" alignment="TOP_CENTER" layoutX="523.0" layoutY="153.0" prefHeight="200.0" prefWidth="281.0" styleClass="chart" stylesheets="@../stylesheets/RegisterStyleSheet.css">
+      <Label alignment="CENTER" prefHeight="22.0" prefWidth="60.0" style="-fx-font-size: 16;" stylesheets="@../stylesheets/RegisterStyleSheet.css" text="Register" textAlignment="CENTER" />
       <Label alignment="CENTER" prefHeight="18.0" prefWidth="283.0" />
       <Label prefHeight="18.0" prefWidth="68.0" />
       <TextField fx:id="username" alignment="CENTER" onMouseClicked="#clearUsername" prefHeight="15.0" prefWidth="282.0" text="user name" />
       <Label prefHeight="18.0" prefWidth="62.0" />
       <PasswordField fx:id="userPass" alignment="CENTER" onMouseClicked="#clearPass" prefHeight="14.0" prefWidth="282.0" text="password" />
       <Label fx:id="error" />
-      <Button mnemonicParsing="false" onAction="#makeNewUser" prefHeight="21.0" prefWidth="80.0" styleClass="reg-button" stylesheets="@../styleSheets/RegisterStyleSheet.css" text="Sing Up" />
+      <Button mnemonicParsing="false" onAction="#makeNewUser" prefHeight="21.0" prefWidth="80.0" styleClass="reg-button" stylesheets="@../stylesheets/RegisterStyleSheet.css" text="Sing Up" />
    </VBox>
-   <Button layoutX="705.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToWelcomeScene" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 2000; -fx-border-radius: 3000;" styleClass="reg-button" stylesheets="@../styleSheets/RegisterStyleSheet.css" text="back" />
+   <Button layoutX="705.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToWelcomeScene" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 2000; -fx-border-radius: 3000;" styleClass="reg-button" stylesheets="@../stylesheets/RegisterStyleSheet.css" text="back" />
 </AnchorPane>

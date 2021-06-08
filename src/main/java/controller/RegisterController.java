@@ -1,33 +1,38 @@
 package controller;
 
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import model.Player;
 
+import java.io.IOException;
+
 
 public class RegisterController extends Controller {
 
-    public void register(String name, Label error, String password, TextField username, TextField userPass) {
-        if (username.getText().equals("user name")) {
-            error.setText("you must fill username and password !!!!");
+    public void register(String name, Label error, String password, TextField username, TextField userPass) throws IOException {
+        if (username.getText().equals("user name") || userPass.getText().equals("password")) {
+            Alert errorAlert=new Alert(Alert.AlertType.ERROR);
+            errorAlert.setContentText("you cant use this name as your username or password");
+            errorAlert.show();
         } else {
             Player player = Player.getPlayerByName(name);
             if (player != null) {
-                error.setStyle("-fx-font-size: 14");
-                error.setText(name + " used before try a new one");
+                Alert errorAlert=new Alert(Alert.AlertType.ERROR);
+                errorAlert.setContentText("this username is used before");
+                errorAlert.show();
                 username.clear();
                 userPass.clear();
                 return;
             }
             if (!name.equals("") && !password.equals("")) {
                 new Player(name, password);
-                error.setStyle(" -fx-font-size: 14");
-                error.setText("player registered successfully");
-                username.clear();
-                userPass.clear();
+                String address = "/userInterface/fxml/Welcome.fxml";
+                this.moveToPage(address, username, "welcome");
             } else {
-                error.setStyle(" -fx-font-size: 14");
-                error.setText("you must fill username and password !!!!");
+                Alert errorAlert=new Alert(Alert.AlertType.ERROR);
+                errorAlert.setContentText("you must fill all fields");
+                errorAlert.show();
             }
         }
     }

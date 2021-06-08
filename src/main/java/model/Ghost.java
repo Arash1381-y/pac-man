@@ -49,7 +49,7 @@ public class Ghost {
     }
 
     public void scareGhost() {
-        ghostPic.setImage(new Image("/pictures/pacmanPic/pacManGamePic/ghost-red.png"));
+        ghostPic.setImage(new Image("/pictures/gameplaypic/pacManGamePic/ghost-red.png"));
     }
 
     public void backToNormal() {

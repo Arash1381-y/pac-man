@@ -24,7 +24,7 @@ public class ScoreBoardContent {
     public static void getData(ArrayList<Game> games) {
         ArrayList<Game> rankAbleGames = new ArrayList<>();
         for (Game game : games) {
-            if (game.isGameFinished() && game.getPlayer() != null) {
+            if (game.isGameFinished() && Player.getAllPlayer().contains(game.getPlayer())) {
                 rankAbleGames.add(game);
             }
         }
@@ -33,7 +33,13 @@ public class ScoreBoardContent {
         Arrays.sort(sortedGames, compare);
         int limit = Math.min(sortedGames.length, 10);
         for (int i = 0; i < limit; i++) {
-            allRank.add(new ScoreBoardContent(sortedGames[i].getPlayer().getName(), sortedGames[i].getScores()));
+            if(isRepeatedBefore(sortedGames[i].getPlayer().getName(), sortedGames[i].getScores())){
+                if (sortedGames.length > limit) {
+                    limit++;
+                }
+            }else {
+                allRank.add(new ScoreBoardContent(sortedGames[i].getPlayer().getName(), sortedGames[i].getScores()));
+            }
         }
         setRank();
     }
@@ -53,10 +59,12 @@ public class ScoreBoardContent {
         int point = -1;
         int rank = 1;
         for (ScoreBoardContent sortedDatum : sortedData) {
-            if (point == sortedDatum.score)
+            if (point == sortedDatum.score) {
                 rank--;
+            }
             sortedDatum.rank = rank;
             point = sortedDatum.score;
+            rank++;
         }
     }
 
@@ -64,12 +72,22 @@ public class ScoreBoardContent {
         return score;
     }
 
+    public String getPlayerName() {
+        return playerName;
+    }
+
     public int getRank() {
         return rank;
     }
 
-    public String getPlayerName() {
-        return playerName;
+    private static boolean isRepeatedBefore(String name , int score){
+        for (ScoreBoardContent scoreBoardContent : allRank) {
+            if (scoreBoardContent.score == score && scoreBoardContent.playerName.equals(name)){
+                return true;
+            }
+        }
+        return false;
     }
+
 
 }

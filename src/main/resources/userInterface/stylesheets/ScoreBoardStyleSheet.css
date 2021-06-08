@@ -1,0 +1,46 @@
+.root {
+    -fx-background-image: url(/pictures/pagebackground/scoreboardBackGround.jpg);
+    -fx-background-color: #172855;
+}
+.table-column {
+    -fx-alignment: CENTER;
+}
+.table-view {
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, transparent, transparent);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-text-fill: black;
+}
+
+.table-view.table-cell:hover{
+    -fx-background-color: rgb(56, 86, 59);
+    -fx-text-fill: lightblue;
+}
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+

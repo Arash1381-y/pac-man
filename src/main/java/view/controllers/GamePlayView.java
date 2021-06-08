@@ -41,7 +41,7 @@ public class GamePlayView {
     private Game game;
 
     {
-        yellowPacman = new Image("/pictures/pacmanPic/yellowPacman.jpg");
+        yellowPacman = new Image("/pictures/gameplaypic/yellowPacman.jpg");
     }
 
     @FXML
@@ -186,7 +186,7 @@ public class GamePlayView {
         ButtonType sure = new ButtonType("im sure", ButtonBar.ButtonData.OK_DONE);
         ButtonType refuse = new ButtonType("cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
         Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION, "", sure, refuse);
-        confirmation.setTitle("DELETE ACCOUNT");
+        confirmation.setTitle("EXIT GAME");
         confirmation.setContentText("YOUR GAME IS UNFINISHED ARE U SURE U WANT TO EXIT ?");
         confirmation.initOwner(((Node) event.getSource()).getScene().getWindow());
         Optional<ButtonType> result = confirmation.showAndWait();

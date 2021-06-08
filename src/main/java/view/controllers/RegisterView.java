@@ -41,7 +41,7 @@ public class RegisterView {
         controller.moveToPage(address , username, "welcome");
     }
 
-    public void makeNewUser() {
+    public void makeNewUser() throws IOException {
         String name;
         String password;
         name = username.getText();

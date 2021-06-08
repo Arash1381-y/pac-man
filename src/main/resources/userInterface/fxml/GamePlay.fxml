@@ -12,7 +12,7 @@
    <ImageView fx:id="life3" fitHeight="30.0" fitWidth="28.0" layoutX="85.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
    <ImageView fx:id="life4" fitHeight="30.0" fitWidth="28.0" layoutX="120.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
    <ImageView fx:id="life5" fitHeight="30.0" fitWidth="28.0" layoutX="155.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
-   <Button fx:id="exit" layoutX="28.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" stylesheets="@../styleSheets/GamePlayStyleSheet.css" text="EXIT" />
+   <Button fx:id="exit" layoutX="28.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" stylesheets="@../stylesheets/GamePlayStyleSheet.css" text="EXIT" />
    <Label fx:id="scoreNum" alignment="CENTER" layoutX="797.0" layoutY="25.0" prefHeight="30.0" prefWidth="103.0" style="-fx-border-color: red; -fx-font-size: 14;" text="score : 0" textFill="RED" />
    <Label fx:id="playerInGameName" alignment="CENTER" layoutX="668.0" layoutY="24.0" prefHeight="30.0" prefWidth="103.0" style="-fx-border-color: red; -fx-font-size: 14;" textFill="RED" />
    <ImageView fx:id="sound" fitHeight="48.0" fitWidth="44.0" layoutX="913.0" layoutY="18.0" onMouseClicked="#clickOnSound" pickOnBounds="true" preserveRatio="true">

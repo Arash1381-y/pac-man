@@ -1,66 +1,46 @@
 .root {
-    -fx-border-color: black;
-    -fx-border-style: solid;
-    -fx-max-width: 600;
-    -fx-max-height: 470;
-    -fx-min-height: 470;
-    -fx-min-width: 470;
-    -fx-background-size: cover;
+    -fx-background-image: url(/pictures/pagebackground/scoreboardBackGround.jpg);
+    -fx-background-color: #172855;
 }
-
-#title {
-    -fx-font-size: 20;
+.table-column {
+    -fx-alignment: CENTER;
+}
+.table-view {
     -fx-text-fill: white;
-    -fx-background-color: black;
-    -fx-border-style: solid;
     -fx-border-color: white;
+    -fx-background-color: transparent;
 }
 
-#generateChart {
-    -fx-background-color: #000000;
-    -fx-pref-width: 100px;
-    -fx-text-fill: #ffffff;
-    -fx-background-radius: 10;
-    -fx-cursor: hand;
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, transparent, transparent);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
 }
 
-#generateChart:hover {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #000000;
-}
-#generateChart:pressed {
-    -fx-translate-y: +2;
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+    -fx-text-fill: black;
 }
 
-#scoreBoard{
-    -fx-border-color: black;
+.table-view.table-cell:hover{
+    -fx-background-color: rgb(56, 86, 59);
+    -fx-text-fill: lightblue;
+}
+.table-row-cell:odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
 }
 
-#generateChart:hover {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #000000;
-}
-#generateChart:pressed {
-    -fx-translate-y: +2;
-}
-
-#exit{
-    -fx-background-color: #000000;
-    -fx-pref-width: 100px;
-    -fx-text-fill: #ffffff;
-    -fx-background-radius: 10;
-    -fx-cursor: hand;
-}
-
-#exit:hover {
-    -fx-background-color: #ffffff;
-    -fx-text-fill: #000000;
-}
-#exit:pressed {
-    -fx-translate-y: +2;
-}
-
-#scoreBoard{
-    -fx-border-color: black;
+.table-view .corner {
+    -fx-background-color: transparent;
 }
 

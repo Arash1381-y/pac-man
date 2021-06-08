@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" styleClass="label" stylesheets="@../styleSheets/SettingStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.SettingView">
+<AnchorPane fx:id="anchorPane" prefHeight="555.0" prefWidth="863.0" styleClass="label" stylesheets="@../stylesheets/SettingStyleSheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.SettingView">
     <Label contentDisplay="CENTER" layoutX="33.0" layoutY="23.0" text="Setting" textFill="WHITE">
         <font>
             <Font name="System Bold" size="20.0" />
@@ -48,5 +48,5 @@
     <Polygon fx:id="previous" fill="WHITE" layoutX="487.0" layoutY="540.0" onMouseClicked="#goToPrevious" points="34.79998779296875, -11.79998779296875, 50.800048828125, -5.79998779296875, 50.800048828125, -19.4000244140625" stroke="BLACK" strokeType="INSIDE" />
     <Button layoutX="29.0" layoutY="472.0" mnemonicParsing="false" onMouseClicked="#switchToWelcomePage" prefHeight="50.0" prefWidth="54.0" style="-fx-background-radius: 200;" text="Back" />
     <Label fx:id="error" layoutX="24.0" layoutY="134.0" prefHeight="18.0" prefWidth="200.0" />
-   <Button layoutX="546.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#generateMap" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 200;" stylesheets="@../styleSheets/SettingStyleSheet.css" text="rand" />
+   <Button layoutX="546.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#generateMap" prefHeight="38.0" prefWidth="44.0" style="-fx-background-radius: 200;" stylesheets="@../stylesheets/SettingStyleSheet.css" text="rand" />
 </AnchorPane>
