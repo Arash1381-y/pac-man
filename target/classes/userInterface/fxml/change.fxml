@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0" styleClass="AnchorPane" stylesheets="@../styleSheets/ChangePassStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ChangePassView">
+<AnchorPane fx:id="anchorPane" prefHeight="550.0" prefWidth="880.0" styleClass="AnchorPane" stylesheets="@../stylesheets/ChangePassStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.ChangePassView">
    <children>
-      <AnchorPane fx:id="pane" layoutX="271.0" layoutY="108.0" prefHeight="366.0" prefWidth="338.0" style="-fx-border-color: #5089B9; -fx-border-width: 2; -fx-border-radius: 50; -fx-background-color: black; -fx-background-radius: 50;" styleClass="pane" stylesheets="@../styleSheets/ChangePassStyleSheet.css">
+      <AnchorPane fx:id="pane" layoutX="271.0" layoutY="108.0" prefHeight="366.0" prefWidth="338.0" style="-fx-border-color: #5089B9; -fx-border-width: 2; -fx-border-radius: 50; -fx-background-color: black; -fx-background-radius: 50;" styleClass="pane" stylesheets="@../stylesheets/ChangePassStyleSheet.css">
          <children>
             <VBox alignment="TOP_CENTER" focusTraversable="true" layoutX="26.0" layoutY="21.0" prefHeight="314.0" prefWidth="286.0" style="-fx-background-color: black; -fx-background-radius: 50; -fx-border-color: #5089B9; -fx-border-radius: 50; -fx-border-width: 5;">
                <children>
