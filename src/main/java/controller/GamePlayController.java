@@ -60,6 +60,7 @@ public class GamePlayController extends Controller {
         chomp = new MediaPlayer(new Media(Objects.requireNonNull(getClass().getResource("/music&soundeffect/eatPoint.wav")).toString()));
         eatGhost = new MediaPlayer(new Media(Objects.requireNonNull(getClass().getResource("/music&soundeffect/eatghost.wav")).toString()));
         eatPacman = new MediaPlayer(new Media(Objects.requireNonNull(getClass().getResource("/music&soundeffect/eatPacman.wav")).toString()));
+
         gameState = GameState.NOT_STARTED;
         yellowGhostPic = new Image("/pictures/gameplaypic/pacManGamePic/ghost-yellow.png");
         greenGhostPic = new Image("/pictures/gameplaypic/pacManGamePic/ghost-green.png");
@@ -278,7 +279,10 @@ public class GamePlayController extends Controller {
     }
 
     private void eatGhost(Ghost ghost) {
-        playSoundEffect(eatGhost);
+        if (!isSoundEffectDisable) {
+            playSoundEffect(eatGhost);
+        }
+
         ghost.reset(new MapHouse(ghost.getGhostSafeHouseRow(), ghost.getGhostSafeHouseColumn()));
     }
 
@@ -334,7 +338,9 @@ public class GamePlayController extends Controller {
                             }
                         } else {
                             pacmanLoc.eatHousePoint();
-                            playSoundEffect(chomp);
+                            if (!isSoundEffectDisable) {
+                                playSoundEffect(chomp);
+                            }
                             game.updateScore();
                             chomp.play();
                             scorePlace.setText("score : " + game.getScores());
@@ -352,7 +358,9 @@ public class GamePlayController extends Controller {
     private void killPacman() {
         pause();
         pacman.reset(gameBoard.getMapHouse(16, 16));
-        playSoundEffect(eatPacman);
+        if (!isSoundEffectDisable) {
+            playSoundEffect(eatPacman);
+        }
         game.pacmanDie();
         gamePlayView.reducePacmanHealth();
     }
@@ -480,10 +488,8 @@ public class GamePlayController extends Controller {
 
 
     public void playSoundEffect(MediaPlayer soundEffect) {
-        if (!isSoundEffectDisable) {
-            soundEffect.play();
-            soundEffect.seek(soundEffect.getStartTime());
-        }
+        soundEffect.play();
+        soundEffect.seek(soundEffect.getStartTime());
     }
 
     public void finishGame() {

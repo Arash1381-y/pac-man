@@ -4,86 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="delete use less data and fix bug in changing map">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/pagebackground/scoreboardBackGround.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fix some bugs and refactor graphics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ScoreBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ScoreBoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GamePlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GamePlayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Pacman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ScoreBoardContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ScoreBoardContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/RegisterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/RegisterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/ScoreBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/ScoreBoardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/SettingView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/WelcomeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/music/eatPacman.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/music&amp;soundeffect/eatPacman.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/music/eatPoint.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/music&amp;soundeffect/eatPoint.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/music/eatghost.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/music&amp;soundeffect/eatghost.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/music/pacman_beginning.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/music&amp;soundeffect/pacman_beginning.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/music/test.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ghostPic/blueGhost.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ghostPicInMenus/blueGhost.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ghostPic/ghostPic.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ghostPicInMenus/ghostPic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ghostPic/orangeGhost.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ghostPicInMenus/orangeGhost.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ghostPic/pinkGhost.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ghostPicInMenus/pinkGhost.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ghostPic/redGhost.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ghostPicInMenus/redGhost.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/ghost-blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/ghost-blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/ghost-green.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/ghost-green.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/ghost-pink.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/ghost-pink.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/ghost-red.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/ghost-red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/ghost-yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/ghost-yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-closed.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/packman-closed.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-down-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/packman-down-open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-left-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/packman-left-open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-right-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/packman-right-open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/pacManGamePic/packman-up-open.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/pacManGamePic/packman-up-open.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/redPacman.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/redPacman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/pacmanPic/yellowPacMan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/gameplaypic/yellowPacMan.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Change.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Change.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/LoginUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/LoginUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Scoreboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Scoreboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Setting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/fxml/Welcome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ChangePassStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/ChangePassStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/GamePlayStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/GamePlayStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/LoginStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/LoginStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ProfileStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/ProfileStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/RegisterStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/RegisterStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/ScoreBoardStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/ScoreBoardStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/SettingStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/SettingStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/styleSheets/WelcomeStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/WelcomeStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/music/test.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/ghostPic/blueGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/ghostPic/ghostPic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/ghostPic/orangeGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/ghostPic/pinkGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/ghostPic/redGhost.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/pacmanPic/redPacman.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pictures/pacmanPic/yellowPacMan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/GamePlay.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/LoginUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/LoginUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Scoreboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Scoreboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Setting.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/fxml/Welcome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/fxml/Welcome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ScoreBoardStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/ScoreBoardStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/GamePlayView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/RegisterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/RegisterView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/SettingView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/GamePlayController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/GamePlayController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/GamePlayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/GamePlayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Ghost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Ghost.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,7 +381,7 @@
       <workItem from="1623084785762" duration="17000" />
       <workItem from="1623084821251" duration="613000" />
       <workItem from="1623092244002" duration="15175000" />
-      <workItem from="1623109756643" duration="18940000" />
+      <workItem from="1623109756643" duration="22341000" />
     </task>
     <task id="LOCAL-00001" summary="complete setting">
       <created>1622256724584</created>
@@ -505,7 +432,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623109129670</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix some bugs and refactor graphics">
+      <created>1623185267187</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623185267187</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix some bugs and refactor graphics">
+      <created>1623185410899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623185410899</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -549,7 +490,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -566,7 +534,8 @@
     <MESSAGE value="game logic and ghosts are added" />
     <MESSAGE value="game logic is completed" />
     <MESSAGE value="delete use less data and fix bug in changing map" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete use less data and fix bug in changing map" />
+    <MESSAGE value="fix some bugs and refactor graphics" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs and refactor graphics" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

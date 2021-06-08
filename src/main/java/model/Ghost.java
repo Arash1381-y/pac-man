@@ -1,5 +1,6 @@
 package model;
 
+import animatefx.animation.Flash;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -59,6 +60,7 @@ public class Ghost {
     public void reset(MapHouse newPacmanHouse) {
         ghostHouse.getPane().getChildren().remove(ghost);
         ghostHouse = newPacmanHouse;
+        new Flash(ghost).play();
         ghostHouse.getPane().getChildren().add(ghost);
     }
 
