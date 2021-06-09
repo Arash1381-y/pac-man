@@ -14,6 +14,8 @@ public class MapPoint extends Circle {
             this.setStyle("-fx-fill: #f1ba12");
             this.setRadius(2.0);
         }
+        this.setLayoutX(0.32);
+        this.setLayoutY(0.32);
     }
 
     public boolean isBomb() {

@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fix some bugs and refactor graphics">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add some effects on ghost death">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/GamePlayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/GamePlayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/GamePlayController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/GamePlayController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/GamePlayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/GamePlayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Ghost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Ghost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/SettingStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/SettingStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/MapPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/MapPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/SettingStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/SettingStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,15 +282,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -381,7 +388,8 @@
       <workItem from="1623084785762" duration="17000" />
       <workItem from="1623084821251" duration="613000" />
       <workItem from="1623092244002" duration="15175000" />
-      <workItem from="1623109756643" duration="22341000" />
+      <workItem from="1623109756643" duration="22981000" />
+      <workItem from="1623193462289" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="complete setting">
       <created>1622256724584</created>
@@ -446,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623185410899</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add some effects on ghost death">
+      <created>1623190050582</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623190050582</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -535,7 +550,8 @@
     <MESSAGE value="game logic is completed" />
     <MESSAGE value="delete use less data and fix bug in changing map" />
     <MESSAGE value="fix some bugs and refactor graphics" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs and refactor graphics" />
+    <MESSAGE value="add some effects on ghost death" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some effects on ghost death" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
