@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add some effects on ghost death">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MapPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MapPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Maps.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Players.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jsonfiles/Ranks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/SettingStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userInterface/stylesheets/SettingStyleSheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Maps.Json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ScoreBoardContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ScoreBoardContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/controllers/GamePlayView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Players.Json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MapPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/MapPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/SettingStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userInterface/styleSheets/SettingStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jsonfiles/Ranks.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jsonfiles/Ranks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/controllers/WelcomeView$3.class" afterDir="false" />
@@ -282,17 +276,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -390,6 +373,7 @@
       <workItem from="1623092244002" duration="15175000" />
       <workItem from="1623109756643" duration="22981000" />
       <workItem from="1623193462289" duration="3867000" />
+      <workItem from="1623258369637" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="complete setting">
       <created>1622256724584</created>

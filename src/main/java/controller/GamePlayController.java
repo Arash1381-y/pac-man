@@ -493,6 +493,9 @@ public class GamePlayController extends Controller {
     }
 
     public void finishGame() {
+        pacmanMovementAnimation.stop();
+        ghostMovementAnimation.stop();
+        pacmanMouthAnimation.stop();
         game.finishGame();
     }
 

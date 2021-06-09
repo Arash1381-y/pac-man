@@ -1,5 +1,6 @@
 package view.controllers;
 
+import animatefx.animation.Flash;
 import animatefx.animation.Hinge;
 import controller.GamePlayController;
 import controller.MapGenerator;
@@ -109,6 +110,9 @@ public class GamePlayView {
             gameOverLabel.setLayoutX(140);
             gameOverLabel.setLayoutY(300);
             anchorPane.getChildren().add(gameOverLabel);
+            Flash flash = new Flash(gameOverLabel);
+            flash.setResetOnFinished(true);
+            flash.play();
         }
     }
 

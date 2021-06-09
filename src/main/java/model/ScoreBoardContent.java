@@ -59,6 +59,9 @@ public class ScoreBoardContent {
         int point = -1;
         int rank = 1;
         for (ScoreBoardContent sortedDatum : sortedData) {
+            if (rank > 11) {
+                allRank.remove(sortedDatum);
+            }
             if (point == sortedDatum.score) {
                 rank--;
             }
